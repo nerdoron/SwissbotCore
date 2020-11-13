@@ -486,9 +486,9 @@ namespace SwissbotCore.Modules
         [DiscordCommand("fate", description = "generates the fate image", commandHelp = "Parameters - `(PREFIX)fate <@user>`")]
         public async Task fate(string user)
         {
-            //baseurl https://cdn.discordapp.com/attachments/592807608499437665/678443510210363442/council.jpg
+            //baseurl https://media.discordapp.net/attachments/776929733560500296/776949651206701106/council.png
             WebClient wc = new WebClient();
-            byte[] bytes = wc.DownloadData("https://cdn.discordapp.com/attachments/620673311122391040/682691076649517087/image0.png");
+            byte[] bytes = wc.DownloadData("https://media.discordapp.net/attachments/776929733560500296/776949651206701106/council.png");
             MemoryStream ms = new MemoryStream(bytes);
             System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
             string purl = Context.Message.MentionedUsers.First().GetAvatarUrl();
